@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
 }
-
+/* 
 label {
   font-weight: bold;
   display: flex;
@@ -28,8 +28,8 @@ textarea {
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
-  /* margin-bottom: 20px; */
-}
+} 
+*/
 
 .form-control {
   margin-bottom: 20px;

@@ -30,8 +30,8 @@ export default function LoginForm() {
                     return (
                         <Form>
                             <h2>Login Form</h2>
-                            <FormikControl control='input' type='email' label='Email' name='email' />
-                            <FormikControl control='input' type='password' label='Password' name='password'/>
+                            <FormikControl control='chakrainput' type='email' label='Email' name='email' />
+                            <FormikControl control='chakrainput' type='password' label='Password' name='password'/>
                             <button type='submit' disabled={!formik.isValid}>Submit</button>
                         </Form>
                     )
