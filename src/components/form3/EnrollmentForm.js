@@ -3,7 +3,7 @@ import {Formik, Form} from 'formik'
 import * as Yup from 'yup'
 import FormikControl from '../form2/FormikControl'
 
-export default function CourseForm() {
+export default function EnrollmentForm() {
 
     const courseOptions = [
         {key: 'Select the course', value: ''},

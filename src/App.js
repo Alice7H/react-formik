@@ -5,7 +5,7 @@ import './App.css';
 // import FormikContainer from './components/form2/FormikContainer';
 // import LoginForm from './components/form3/LoginForm';
 // import RegistrationForm from './components/form3/RegistrationForm'
-import CourseForm from './components/form3/CourseForm';
+import EnrollmentForm from './components/form3/EnrollmentForm';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <FormikContainer/>
          <LoginForm/> 
          <RegistrationForm/>*/}
-         <CourseForm/>
+         <EnrollmentForm/>
 
     </div>
   );
