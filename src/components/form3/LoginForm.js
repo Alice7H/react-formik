@@ -2,6 +2,7 @@ import React from 'react'
 import {Formik, Form} from 'formik'
 import * as Yup from 'yup'
 import FormikControl from '../form2/FormikControl'
+import ChakraButton from '../chrakra/ChakraButton'
 
 export default function LoginForm() {
 
@@ -32,7 +33,7 @@ export default function LoginForm() {
                             <h2>Login Form</h2>
                             <FormikControl control='chakrainput' type='email' label='Email' name='email' />
                             <FormikControl control='chakrainput' type='password' label='Password' name='password'/>
-                            <button type='submit' disabled={!formik.isValid}>Submit</button>
+                            <ChakraButton mt={4} disabled={!formik.isValid} type='submit'> Submit</ChakraButton>
                         </Form>
                     )
                 }

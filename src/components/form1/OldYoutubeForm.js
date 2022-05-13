@@ -1,6 +1,7 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import ChakraButton from '../chrakra/ChakraButton'
 
 const initialValues = {
     name: '',
@@ -40,7 +41,7 @@ const validationSchema = Yup.object({
     channel: Yup.string().required('Required')
 })
 
-export default function YoutubeForm() {
+export default function OldYoutubeForm() {
     const formik = useFormik({
         initialValues,
         onSubmit,
@@ -53,6 +54,7 @@ export default function YoutubeForm() {
     return (
         <div>
             <form onSubmit={formik.handleSubmit}>
+                <h2>Old Youtube Form</h2>
                 <div className='form-control'>
                     <label htmlFor='name'>Name</label>
                     <input
@@ -97,7 +99,7 @@ export default function YoutubeForm() {
                 ) : null}
                 </div>
 
-                <button type='submit'>Submit</button>
+                <ChakraButton type='submit'>Submit</ChakraButton>
             </form>
         </div>
     );

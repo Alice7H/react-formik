@@ -2,6 +2,7 @@ import React from 'react'
 import {Formik, Form} from 'formik'
 import * as Yup from 'yup'
 import FormikControl from '../form2/FormikControl'
+import ChakraButton from '../chrakra/ChakraButton'
 
 export default function EnrollmentForm() {
 
@@ -47,12 +48,13 @@ export default function EnrollmentForm() {
             { formik => {
                 return(
                     <Form>
+                        <h2>Enrollment Form</h2>
                         <FormikControl control='input' type='email' label='Email' name='email' />
                         <FormikControl control='textarea' label='Bio' name='bio' />
                         <FormikControl control='select' label='Course' name='course' options={courseOptions} />
                         <FormikControl control='checkbox' label='Skillset' name='skills' options={checkOptions} />
                         <FormikControl control='date' type='text' label='Course date' name='courseDate'/>
-                        <button type='submit' disabled={!formik.isValid}>Submit</button>
+                        <ChakraButton type='submit' disabled={!formik.isValid}>Submit</ChakraButton>
                     </Form>
                 )
             }}

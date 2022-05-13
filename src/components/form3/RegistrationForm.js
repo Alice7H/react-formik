@@ -2,6 +2,7 @@ import React from 'react'
 import {Formik, Form} from 'formik'
 import * as Yup from 'yup'
 import FormikControl from  '../form2/FormikControl'
+import ChakraButton from '../chrakra/ChakraButton'
 
 export default function RegistrationForm() {
 
@@ -48,7 +49,7 @@ export default function RegistrationForm() {
                         <FormikControl control='input' type='password' label='Confirm Password' name='confirmPassword' />
                         <FormikControl control='radio' label='Mode of contact' name='modeOfContact' options={options} />
                         <FormikControl control='input' type='text' label='Phone number' name='phone' />
-                        <button type='submit' disabled={!formik.isValid}>Submit</button>
+                        <ChakraButton type='submit' disabled={!formik.isValid}>Submit</ChakraButton>
                     </Form>
                 )
             }}

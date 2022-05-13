@@ -8,7 +8,8 @@ import {
     FastField,
 } from 'formik';
 import * as Yup from 'yup';
-import TextError from '../form2/TextError';
+import TextError from '../TextError';
+import ChakraButton from '../chrakra/ChakraButton'
 
 const initialValues = {
     name: 'Alice',
@@ -82,6 +83,7 @@ export default function YoutubeForm() {
                 console.log('Formik props', formik)
                 return (
                     <Form>
+                        <h2>Youtube Form</h2>
                         <div className='form-control'>
                             <label htmlFor='name'>Name</label>
                             <Field type='text' id='name' name='name' />
@@ -130,7 +132,7 @@ export default function YoutubeForm() {
                             <label htmlFor='address'>Address</label>
                             <FastField name='address'>
                                 {(props) => {
-                                    const { field, form, meta } = props;
+                                    const { field, meta } = props;
                                     // console.log('Render props ', props);
                                     return (
                                         <div>
@@ -274,10 +276,9 @@ export default function YoutubeForm() {
                         {/* <button type='submit' disabled!(formik.dirty && formik.isValid)}>Submit</button> */}
                         {/* <button type='submit' disabled={={!formik.isValid}>Submit</button> */}
                         
-                        <button type='reset'>Reset</button>
-                        
-                        <button type='button' onClick={()=> setFormValues(savedValues)}>Load Saved data</button>
-                        <button type='submit' disabled={!formik.isValid || formik.isSubmitting}>Submit</button>
+                        <ChakraButton type='reset'>Reset</ChakraButton>             
+                        <ChakraButton mt={2} type='button' onClick={()=> setFormValues(savedValues)}>Load Saved data</ChakraButton>
+                        <ChakraButton mt={2} type='submit' disabled={!formik.isValid || formik.isSubmitting}>Submit</ChakraButton>
                     </Form>
                 )
             }}
